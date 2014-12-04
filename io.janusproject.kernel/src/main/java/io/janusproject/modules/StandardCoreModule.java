@@ -59,31 +59,31 @@ public class StandardCoreModule extends AbstractModule {
 		bind(LogService.class).to(ArakhneLocaleLogService.class).in(Singleton.class);
 		bind(ContextSpaceService.class).to(StandardContextSpaceService.class).in(Singleton.class);
 		bind(SpawnService.class).to(StandardSpawnService.class).in(Singleton.class);
-
-		install(new HazelcastModule());
-		install(new JdkExecutorModule());
-
-		// Install the elements for the Janus kernel
-		install(new MandatoryKernelModule());
-
-		// Check if all the services are binded
-		requireBinding(DistributedDataStructureService.class);
-		requireBinding(KernelDiscoveryService.class);
-		requireBinding(ExecutorService.class);
-		requireBinding(ContextSpaceService.class);
-		requireBinding(LogService.class);
-		requireBinding(NetworkService.class);
-		requireBinding(SpawnService.class);
-
-		// Create a binder for: Set<Service>
-		// (This set is given to the service manager to launch the services).
-		Multibinder<Service> serviceSetBinder = Multibinder.newSetBinder(binder(), Service.class);
-		serviceSetBinder.addBinding().to(LogService.class);
-		serviceSetBinder.addBinding().to(ExecutorService.class);
-		serviceSetBinder.addBinding().to(ContextSpaceService.class);
-		serviceSetBinder.addBinding().to(KernelDiscoveryService.class);
-		serviceSetBinder.addBinding().to(SpawnService.class);
-		serviceSetBinder.addBinding().to(DistributedDataStructureService.class);
+//
+//		install(new HazelcastModule());
+//		install(new JdkExecutorModule());
+//
+//		// Install the elements for the Janus kernel
+//		install(new MandatoryKernelModule());
+//
+//		// Check if all the services are binded
+//		requireBinding(DistributedDataStructureService.class);
+//		requireBinding(KernelDiscoveryService.class);
+//		requireBinding(ExecutorService.class);
+//		requireBinding(ContextSpaceService.class);
+//		requireBinding(LogService.class);
+//		requireBinding(NetworkService.class);
+//		requireBinding(SpawnService.class);
+//
+//		// Create a binder for: Set<Service>
+//		// (This set is given to the service manager to launch the services).
+//		Multibinder<Service> serviceSetBinder = Multibinder.newSetBinder(binder(), Service.class);
+//		serviceSetBinder.addBinding().to(LogService.class);
+//		serviceSetBinder.addBinding().to(ExecutorService.class);
+//		serviceSetBinder.addBinding().to(ContextSpaceService.class);
+//		serviceSetBinder.addBinding().to(KernelDiscoveryService.class);
+//		serviceSetBinder.addBinding().to(SpawnService.class);
+//		serviceSetBinder.addBinding().to(DistributedDataStructureService.class);
 	}
 
 }

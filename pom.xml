@@ -89,7 +89,7 @@
 				</exclusions>
 			</dependency>
 
-			<!-- <dependency>
+			<dependency>
 				<groupId>com.google.inject</groupId>
 				<artifactId>guice</artifactId>
 				<version>${guice.version}</version>
@@ -99,7 +99,7 @@
 						<groupId>com.google.guava</groupId>
 					</exclusion>
 				</exclusions>
-			</dependency> -->
+			</dependency>
 
 			<dependency>
     			<groupId>org.roboguice</groupId>

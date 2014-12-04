@@ -46,10 +46,10 @@ public class StandardJanusPlatformModule extends AbstractModule {
 		install(new StandardCoreModule());
 
 		if (!JanusConfig.getSystemPropertyAsBoolean(JanusConfig.OFFLINE, false)) {
-			install(new NetworkEventModule());
-			install(new ZeroMQNetworkModule());
+			//install(new NetworkEventModule());
+			//install(new ZeroMQNetworkModule());
 		} else {
-			install(new NoNetworkModule());
+			//install(new NoNetworkModule());
 		}
 	}
 
