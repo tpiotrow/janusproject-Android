@@ -89,11 +89,23 @@
 				</exclusions>
 			</dependency>
 
-			<dependency>
+			<!-- <dependency>
 				<groupId>com.google.inject</groupId>
 				<artifactId>guice</artifactId>
 				<version>${guice.version}</version>
 				<exclusions>
+					<exclusion>
+						<artifactId>guava</artifactId>
+						<groupId>com.google.guava</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency> -->
+
+			<dependency>
+    			<groupId>org.roboguice</groupId>
+    			<artifactId>roboguice</artifactId>
+    			<version>3.0.1</version>
+    			<exclusions>
 					<exclusion>
 						<artifactId>guava</artifactId>
 						<groupId>com.google.guava</groupId>
@@ -228,7 +240,7 @@
 						<execution>
 							<phase>prepare-package</phase>
 							<goals>
-								<goal>checkstyle</goal>
+								<!-- <goal>checkstyle</goal> -->
 							</goals>
 						</execution>
 					</executions>
@@ -478,7 +490,7 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>check</goal>
+							<!-- <goal>check</goal> -->
 							<goal>generate</goal>
 						</goals>
 					</execution>
